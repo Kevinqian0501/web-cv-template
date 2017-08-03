@@ -10,6 +10,7 @@ RUN apt-get update --fix-missing  \
 RUN service supervisor stop \
     && service nginx stop
 
+ADD ./requirements.txt ./
 RUN pip install -r requirements.txt
 
 # expose port
